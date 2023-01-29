@@ -14,4 +14,4 @@ def check_perfect(n):
 
 
 
-check_perfect(7)
+check_perfect(6)
