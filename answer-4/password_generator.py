@@ -2,9 +2,9 @@
 import random
 
 SPECIAL_CHARS = """ !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
-NUMBERS = """0123456789"""
-UPPER_LETTERS = """ABCDEFGHIJKLMNOPQRSTUVWXYZ"""
-LOWER_LETTERS = """abcdefghijklmnopqrstuvwxyz"""
+NUMBERS = "0123456789"
+UPPER_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+LOWER_LETTERS = "abcdefghijklmnopqrstuvwxyz"
 
 
 def Generate_random_password(number_of_lower_case_letters = 0, number_of_upper_case_letters = 0, number_of_numbers = 0, number_of_special_chars = 0):

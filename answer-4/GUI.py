@@ -39,7 +39,7 @@ canvas.create_text(250, 200, text = "How would you like your password?", font=("
 canvas.create_text(250, 250, text = "Lower-case Letters: ", font = ("Arial", 11, "bold"), anchor="e", fill= "#556080")
 canvas.create_text(250, 270, text = "Upper-case Letters: ", font = ("Arial", 11, "bold"), anchor="e", fill= "#556080")
 canvas.create_text(250, 290, text = "Numbers: ", font = ("Arial", 11, "bold"), anchor="e", fill= "#556080")
-canvas.create_text(250, 310, text = "Special Letters: ", font = ("Arial", 11, "bold"), anchor="e", fill= "#556080")
+canvas.create_text(250, 310, text = "Special Characters: ", font = ("Arial", 11, "bold"), anchor="e", fill= "#556080")
 
 # Entry boxes for the password generation options with default values of 3
 lower_case_entry, upper_case_entry, numbers_entry, special_chars_entry  = tk.Entry(screen), tk.Entry(screen), tk.Entry(screen), tk.Entry(screen)
@@ -59,7 +59,7 @@ canvas.create_window(250, 350, window = generate_btn)
 
 # creating the password field to display the generated password
 password_field = tk.Entry(screen, font=("Arial", 20, "bold"), fg="#e4c05c", justify="center", relief="flat", state="readonly")
-canvas.create_window(250, 410, window = password_field)
+canvas.create_window(250, 400, window = password_field)
 
 screen.mainloop()
 

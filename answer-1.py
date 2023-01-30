@@ -6,7 +6,7 @@ def print_pascal_triangle(n):
     
     Returns the the nth row as a list of integers. '''
     
-    # initialize the first row as a list of 1s of size n.
+    # initialize the row as a list of 1s of size n.
     row = [1] * n
     
     # The base condition of the recursion, when n is 1.
@@ -20,7 +20,7 @@ def print_pascal_triangle(n):
             row[i] = previous_row[i-1] + previous_row[i]
             
         # print the current row.
-        print(" " * (row_number - n), end="")
+        print(" " * (row_number - n), end="")   # padding
         print(row)
         return row
 

@@ -7,7 +7,7 @@ def is_perfect_number(number):
     # If the number is negative or 0, return False.
     if number <= 0:
         return False
-
+    
     # Calculating the divisors of the number.
     divisors = [1]
     for i in range(2, number):
@@ -27,4 +27,4 @@ number = int(input("Enter a number to check if it's a perect number: "))
 if is_perfect_number(number):
     print (f"Number {number} is a perfect number")
 else:
-    print (f"Number {number} is not a perfect number")
+    print (f"Number {number} is NOT a perfect number")
