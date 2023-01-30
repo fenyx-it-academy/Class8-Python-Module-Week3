@@ -8,7 +8,7 @@ import random as ran
 import string as st
 
 
-def generate_password(length):
+def generate_password(length, numlet=4, char=True):
     '''Returns a password consisting of lowercase and uppercase English letters, 
     numbers and symbols, except for those easily confused with each other'''
 
@@ -17,7 +17,13 @@ def generate_password(length):
     letters = [letter for letter in st.ascii_letters if letter not in 'lIoO']
     characters = [char for char in st.punctuation]
     
-    password = ran.sample(letters, int(length - 3)) + ran.sample(digits, 2) + ran.sample(characters, 1)
+    password = ran.sample(letters, numlet)
+    if char==True:
+        password += ran.sample(characters, 1) + ran.sample(digits, length-numlet-1)
+    else:
+        password += ran.sample(digits, length-numlet)
+
+
     ran.shuffle(password)
     return "".join(password)
     
