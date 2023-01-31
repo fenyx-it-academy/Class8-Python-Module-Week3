@@ -3,8 +3,11 @@ from tkinter import *
 
 
 def generate():
-    
-    password = gen_pass(password_length.get(), lowercase_len.get(), uppercase_len.get(),special_char.get())
+    """This function is to get the random password value from random_pass function
+       and validate the value
+    """
+    password = random_pass(password_length.get(
+    ), lowercase_len.get(), uppercase_len.get(), special_char.get())
     if password == 1:
        password_lable.config(text='Total number of inputs are more than password length, please try again',fg='red', font=('Arial', 9))
     elif password == 2:
@@ -16,7 +19,18 @@ def generate():
      
     
 
-def gen_pass(pl,lc,uc,sc):
+def random_pass(pl,lc,uc,sc):
+    """This function is to pass the user inputs and generate random password
+
+    Args:
+        pl (int): this is for the password length
+        lc (int): this is fo the lowercase letter length
+        uc (int): this is for the uppercase letter length
+        sc (int): this is for special charcters
+
+    Returns:
+        string: the return is the generated random password
+    """
     password_length = int(pl)
     lowercase_len = int(lc)
     uppercase_len = int(uc)
