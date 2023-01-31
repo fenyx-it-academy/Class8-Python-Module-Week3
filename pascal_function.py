@@ -1,6 +1,8 @@
 def pascal_triangle(number):
-    row =[1]
-    for i in range(number):
+     """A function that accepts any integer n 
+       and return the first n rows of pascal's triangle"""
+     row =[1]
+     for i in range(number):
         for j in range(i+1):
           print(row[j], end="  ")
         row = [x+y for x, y in zip([0] + row , row + [0])]
